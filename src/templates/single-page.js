@@ -31,7 +31,7 @@ export default function SinglePage({ pageContext }){
                 font-size: 28px;
                 `}
             >
-                리조트
+                Borneo Sea Life Resort
             </h1>
             <div
                 css={css`

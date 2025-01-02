@@ -16,7 +16,7 @@ export function Footer() {
           padding: 36px 0;
         `}
       >
-        © 2024 Resort
+        © 2024 Borneo Sea Life Resort
       </Container>
     </div>
   );
