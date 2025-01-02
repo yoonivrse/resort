@@ -5,6 +5,11 @@
  */
 
 module.exports = {
+  pathPrefix:"/resort",
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet'
+
+  ],
 }
