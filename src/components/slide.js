@@ -14,7 +14,7 @@ export function Slide(props) {
         padding-top: 10px;
         padding-bottom: 10px;
         border: 1px solid #dee2e6;
-      
+        min-height:1000px;
 
         h2 {
             padding-top: 10px;

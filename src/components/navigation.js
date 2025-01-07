@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { animateScroll, Link, Events } from 'react-scroll';
+import {  Nav, Navbar } from 'react-bootstrap';
+import { animateScroll, Events } from 'react-scroll';
+import {navigate} from 'gatsby';
 
 export function Navigation() {
   const menubarHeight = 45;
-  const scrollOffset = -menubarHeight;
 
   const navBarWrapper = useRef(null);
   // 현재 스크롤 위치에 따라서 네비게이션을 상단에 고정시킬지 컨텐츠 내부에 위치시킬지 제어하기위한 상태 변수
@@ -82,37 +82,50 @@ export function Navigation() {
         `}
       >
         <Nav>
-          <Link
-            className="nav-link"
-            to="booking"
-            offset={scrollOffset}
-            spy={true}
-            smooth={true}
+          <button
+            css={css`
+              color:rgba(0,0,0,.5);
+              background-color: transparent;
+              border: none;
+              &:hover{
+                color:rgba(0,0,0,.7);
+              }
+              `}
+              onClick={()=>window.open('https://www.google.com')
+              }
           >
-            예약하기(Booking)
-            <i />
-          </Link>
-          <Link
-            className="nav-link"
-            to="photo"
-            offset={scrollOffset}
-            spy={true}
-            smooth={true}
+            예약하기 (Booking)
+          </button>     
+          <button
+            css={css`
+              color:rgba(0,0,0,.5);
+              background-color: transparent;
+              border: none;
+              &:hover{
+                color:rgba(0,0,0,.7);
+              }
+              `}
+              onClick={()=>{
+                navigate('/')
+              }}
           >
-            방(Room)
-            <i />
-          </Link>
-          
-          <Link
-            className="nav-link"
-            to="youtube-slide"
-            offset={scrollOffset}
-            spy={true}
-            smooth={true}
+            사진 (Photos)
+          </button>     
+          <button
+            css={css`
+              color:rgba(0,0,0,.5);
+              background-color: transparent;
+              border: none;
+              &:hover{
+                color:rgba(0,0,0,.7);
+              }
+              `}
+              onClick={()=> navigate('/videos')}
           >
+
             영상(Video)
-            <i />
-          </Link>
+          </button>     
+          
         </Nav>
       </Navbar>
 

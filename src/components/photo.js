@@ -9,8 +9,14 @@ export function Photo(props){
         <Slide id='photo' title='방 사진(Room Photos)'>
             <div
                 css={css`
-                    display:flex;
-                    overflow:scroll;    
+                    display:grid;
+                    overflow:scroll;
+                    grid-template-columns: auto auto auto;
+                    column-gap: 50px;
+                    row-gap: 50px;
+                    padding: 10px;
+                    align-items: center;
+                    justify-content:center;  
                 `}
             >
             {files.map((x)=>{

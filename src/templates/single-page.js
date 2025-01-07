@@ -3,47 +3,55 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { css } from '@emotion/react';
 import { Navigation } from '../components/navigation';
 import { Footer } from '../components/footer';
-import { Booking } from '../components/booking';
-import {Photo} from '../components/photo';
-import { YoutubeSlide } from '../components/youtube-slide';
+
 
 
 export default function SinglePage({ pageContext }){
-    const { dataSource } = pageContext;
 
     return(
         <div id = 'top'>
             <div
                 css={css`
                     position: absolute;
-                    background-color: black;
                     width: 100%;
                     height: 300px;
                     z-index: -99;
-                `}
-            />
-            <h1
-                css={css`
-                padding-top: 48px;
-                padding-bottom: 24px;
-                color: white;
-                text-align: center;
-                font-size: 28px;
-                `}
-            >
-                Borneo Sea Life Resort
-            </h1>
+                    `}
+                    />
             <div
                 css={css`
-                text-align: center;
+                    background-color: lightblue;
                 `}
             >
+                <h1
+                css={css`
+                    padding-top: 48px;
+                    padding-bottom: 24px;
+                    text-align: center;
+                    font-size: 28px;
+                    margin-bottom:0;
+                    `}
+                    >
+                    Borneo Sea Life Resort
+                </h1>
             </div>
-
-            <Navigation />
-            <Booking/>
-            <Photo dataSource={dataSource}/>
-            <YoutubeSlide id="youtube-slide" dataSource={dataSource} />
+            <div>
+                <Navigation/>
+            </div>
+            <h2
+                css={css`
+                    background: white;    
+                `}
+            >
+                location
+            </h2>
+            <div
+            css={css`
+                height:1000px;
+                background-color: transparent;
+            `}
+            >
+            </div>
             <Footer/>
         </div>
     )
